@@ -45,23 +45,23 @@ function ToDoList(){
     }
 
     return(<div className="todo-list-container">
-        <h1>ToDo List</h1>
-        <div className="form">
-            <input className="input" type="text" placeholder='Add a new task'onKeyDown={(e) => {if (e.key === 'Enter') {handleAdd()}}} value={input} onChange={handleInput}/>
-            <button className="add-btn" onClick={handleAdd} >Add</button>
-            <ul className="list">
-                {tasks.map((task, index) => {return (
-                    <li className="list-item" key={index}>
-                    <span>{task}</span> {/* Wrap the task text */}
-                    <button className="delete-btn" onClick={() => handleDelete(index)}>&#x1F5D1;</button>
-                    <button className="edit-btn" onClick={() => handleEdit(index)}>&#x270E;</button>
-                    <button className="move-up-btn" onClick={() => moveUp(index)}>&#x2191;</button>
-                    <button className="move-down-btn" onClick={() => moveDown(index)}>&#x2193;</button>
-                </li>);
-                })}
-            </ul>
-        </div>
-    </div>);
+    <h1>ToDo List</h1>
+    <div className="form">
+      <input className="input" type="text" placeholder="Add a new task" onKeyDown={(e) => {if (e.key === 'Enter') {handleAdd()}}} value={input} onChange={handleInput}/>
+      <button className="add-btn" onClick={handleAdd}>Add</button>
+      <ul className="list">
+        {tasks.map((task, index) => (
+          <li className="list-item" key={index}>
+            <span>{task}</span>
+            <button className="delete-btn" onClick={() => handleDelete(index)}>&#x1F5D1;</button>
+            <button className="edit-btn" onClick={() => handleEdit(index)}>&#x270E;</button>
+            <button className="move-up-btn" onClick={() => moveUp(index)}>&#x2191;</button>
+            <button className="move-down-btn" onClick={() => moveDown(index)}>&#x2193;</button>
+          </li>
+        ))}
+      </ul>
+    </div>    
+  </div>);
 
 }
 export default ToDoList;

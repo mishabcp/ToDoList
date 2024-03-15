@@ -58,7 +58,17 @@ function ToDoList() {
         const updatedTasks = [...tasks];
         updatedTasks[index].completed = !updatedTasks[index].completed;
         setTasks(updatedTasks);
+    
+        // Update filtered tasks based on the filter criteria
+        if (filter === 'completed') {
+            setFilteredTasks(updatedTasks.filter(task => task.completed));
+        } else if (filter === 'pending') {
+            setFilteredTasks(updatedTasks.filter(task => !task.completed));
+        } else {
+            setFilteredTasks(updatedTasks);
+        }
     }
+    
 
     const handleFilterChange = (value) => {
         setFilter(value);
@@ -112,9 +122,6 @@ function ToDoList() {
                       </li>
                   ))}
                 </ul>
-
-
-
             </div>
             <div className="task-details mt-4">
                 <h2 className="text-xl font-semibold mb-2">Task Details</h2>

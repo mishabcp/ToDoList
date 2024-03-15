@@ -1,4 +1,6 @@
 import React, { useState, useEffect } from 'react';
+import './index.css';
+
 
 function ToDoList() {
     const [input, setInput] = useState('');
@@ -106,7 +108,7 @@ function ToDoList() {
                 </select>
                 <ul className="list">
                   {filteredTasks.map((task, index) => (
-                      <li className={`bg-white border border-gray-300 p-4 mb-6 rounded-md grid grid-cols-1 gap-4 items-center ${task.completed ? 'bg-green-200' : ''}`} key={index}>
+                      <li className={`task-item ${task.completed ? 'completed-task' : ''}`} key={index}>
                           <span className="mb-4">{task.text}</span>
                           <div className="flex justify-between items-center mt-2">
                               {showCompleted && (

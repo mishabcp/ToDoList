@@ -378,12 +378,10 @@ const TodoListApp = () => {
             const highlightedDates = getHighlightedDates();
             const isToday = dateString === new Date().toLocaleDateString();
 
-            if (highlightedDates.includes(dateString)) {
-              if (isToday) {
-                return 'bg-black text-white rounded-xl border'; // Today's date with tasks
-              } else {
-                return 'bg-green-500 text-white rounded-xl border'; // Dates with tasks (excluding today)
-              }
+            if (isToday) {
+              return 'bg-black text-white rounded-xl border'; // Today's date with or without tasks
+            } else if (highlightedDates.includes(dateString)) {
+              return 'bg-green-500 text-white rounded-xl border'; // Dates with tasks (excluding today)
             } else {
               return 'rounded-xl border'; // Rounded border for day cells
             }

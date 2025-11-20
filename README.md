@@ -4,7 +4,6 @@ A modern, futuristic task management application with a stunning sci-fi UI theme
 
 ![TaskNova](https://img.shields.io/badge/version-1.0.0-blue.svg)
 ![React](https://img.shields.io/badge/React-18.2.0-61dafb.svg)
-![License](https://img.shields.io/badge/license-MIT-green.svg)
 
 ## 🚀 Live Demo
 

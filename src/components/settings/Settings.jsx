@@ -228,7 +228,7 @@ const Settings = () => {
                 transition={{ delay: 0.3 }}
                 className="text-center text-slate-500 text-sm"
             >
-                <p>Flow Task Manager v1.0</p>
+                <p>TaskNova v1.0</p>
                 <p className="mt-1">Built with React + Zustand</p>
             </motion.div>
 

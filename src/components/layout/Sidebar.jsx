@@ -23,7 +23,7 @@ const Sidebar = ({ activeTab, setActiveTab }) => {
                 <div className="h-20 flex items-center justify-center lg:justify-start lg:px-8 border-b border-holo-500/20">
                     <FaBolt className="text-holo-500 text-2xl lg:mr-3 animate-pulse" />
                     <h1 className="hidden lg:block font-display text-2xl font-bold tracking-widest text-white">
-                        FLOW
+                        TASKNOVA
                     </h1>
                 </div>
 
